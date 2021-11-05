@@ -1,5 +1,9 @@
-public class Left implements Command {
-   public void execute() {
-       System.out.println("Turning left 90 degrees");
-   } 
+public class Left extends Command {
+    public Left(BeeBot b){
+        super(b);
+    }
+
+    public void execute() {
+        bot.left();
+    } 
 }

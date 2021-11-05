@@ -1,17 +1,23 @@
+import javax.sound.midi.Receiver;
+
 public class Demo {
     public static void main(String[] args) {
         Invoker invoker = new Invoker();
+        BeeBot bot = new BeeBot();
 
-        invoker.setCommand(new Forward());
+        invoker.setCommand(new Forward(bot));
         invoker.executeCommand();
 
-        invoker.setCommand(new Left());
+        invoker.setCommand(new Left(bot));
         invoker.executeCommand();
 
-        invoker.setCommand(new Right());
+        invoker.setCommand(new Forward(bot));
         invoker.executeCommand();
 
-        invoker.setCommand(new Back());
+        invoker.setCommand(new Forward(bot));
+        invoker.executeCommand();
+
+        invoker.setCommand(new Right(bot));
         invoker.executeCommand();
 
     } 
